@@ -2,5 +2,5 @@
 
 ## Made by:
 - [E-Meister](https://github.com/E-Meister2012)
-- [Laura v Ekris](https://github.com/LauraVEkris)
+- [Laura-E](https://github.com/LauraVEkris)
 - [Alex](https://github.com/Sander470)
