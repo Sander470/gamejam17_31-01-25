@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bd7557d205ac1254e967e2acfb4abc43
+guid: 1989ae22cf430db4dbd5a59e7719f93e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5782521184205631276
-    second: zombie_0
+      213: 1099012301840474971
+    second: spook_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zombie_0
+      name: spook_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
-        width: 46
-        height: 64
+        x: 16
+        y: 8
+        width: 32
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d0904dbe9b50cfa0800000000000000
-      internalID: -5782521184205631276
+      spriteID: b536cfe9dd9704f00800000000000000
+      internalID: 1099012301840474971
       vertices: []
       indices: 
       edges: []

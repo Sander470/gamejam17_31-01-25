@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bd7557d205ac1254e967e2acfb4abc43
+guid: 237083c5fe34d984796628d69aa30a6a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5782521184205631276
-    second: zombie_0
+      213: 4841253885904508952
+    second: zombieBack_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zombie_0
+      name: zombieBack_0
       rect:
         serializedVersion: 2
         x: 9
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d0904dbe9b50cfa0800000000000000
-      internalID: -5782521184205631276
+      spriteID: 81851d852c69f2340800000000000000
+      internalID: 4841253885904508952
       vertices: []
       indices: 
       edges: []

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: bd7557d205ac1254e967e2acfb4abc43
+guid: 7ffa773c041a9ea41bb85412441a0b63
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5782521184205631276
-    second: zombie_0
+      213: -8518007437775048810
+    second: zombieLeftSheet_0
+  - first:
+      213: -1429256215082305151
+    second: zombieLeftSheet_1
+  - first:
+      213: -5289876608114202324
+    second: zombieLeftSheet_2
+  - first:
+      213: -7183064457932222645
+    second: zombieLeftSheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +122,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zombie_0
+      name: zombieLeftSheet_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 17
         y: 0
-        width: 46
+        width: 38
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d0904dbe9b50cfa0800000000000000
-      internalID: -5782521184205631276
+      spriteID: 69f684d9d55f9c980800000000000000
+      internalID: -8518007437775048810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombieLeftSheet_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 38
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189fffe7b034a2ce0800000000000000
+      internalID: -1429256215082305151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombieLeftSheet_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 0
+        width: 38
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2964bb70459696b0800000000000000
+      internalID: -5289876608114202324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombieLeftSheet_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 0
+        width: 38
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f473adee0a05c90800000000000000
+      internalID: -7183064457932222645
       vertices: []
       indices: 
       edges: []
