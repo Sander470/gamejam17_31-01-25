@@ -10,8 +10,15 @@ public class EnemyScript : MonoBehaviour
     private Transform _playerTransform;
     bool foundPlayer;
 
+    //variables about this enemy
     [Header("speed")]
     public float EnemySpeed;
+
+    [Header("health")]
+    public float EnemyHealth;
+
+    float EnemyDamage = 2;
+    bool recentHit;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -66,9 +73,12 @@ public class EnemyScript : MonoBehaviour
                 {
                     var targetPos = toPlayer();
                     gameObject.transform.Translate(targetPos * Time.deltaTime * EnemySpeed);
+                    hitPlayer();
                     chaseTimer -= Time.deltaTime;
                     yield return null;
                 }
+                yield return new WaitForSeconds(2);
+                recentHit = false;
             }
         }
     }
@@ -80,4 +90,13 @@ public class EnemyScript : MonoBehaviour
 
     Vector3 toPlayer() { return _playerTransform.position - transform.position;}
 
+    void hitPlayer()
+    {
+        if (checkPlayerPos() == true && recentHit == false)
+        {
+            PlayerController player = FindFirstObjectByType<PlayerController>();
+            player.playerHealth = player.playerHealth - EnemyDamage;
+            recentHit = true;
+        }
+    }
     }

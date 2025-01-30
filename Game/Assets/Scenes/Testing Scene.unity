@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingGun: {fileID: 7410870698129459848, guid: c087c1e8a4c458a459b614cd36a486d8, type: 3}
   moveSpeed: 10
+  playerHealth: 50
 --- !u!114 &231533192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,7 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 7242112548184532700, guid: c63ce736187c5c4409d10820743ec3a8, type: 3}
-  spawnAmount: 10
+  spawnAmount: 1
 --- !u!4 &1358373113
 Transform:
   m_ObjectHideFlags: 0

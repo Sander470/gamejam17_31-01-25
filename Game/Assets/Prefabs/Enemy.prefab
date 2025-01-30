@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86199e9f766699048a52878d7cc3493a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 0
   EnemySpeed: 5
+  EnemyHealth: 10
 --- !u!50 &5335922604933059228
 Rigidbody2D:
   serializedVersion: 5

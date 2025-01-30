@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spook_0: 1099012301840474971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

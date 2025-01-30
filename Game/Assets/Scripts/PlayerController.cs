@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +13,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     public float moveSpeed;
+
+    [Header("Health")]
+    public float playerHealth;
 
     CircleCollider2D switchCollider;
 
@@ -28,6 +33,14 @@ public class PlayerController : MonoBehaviour
         currentRB.MovePosition(currentRB.position + 
             inputDirection * moveSpeed * Time.deltaTime);
         transform.position = currentRB.position;
+
+        if (playerHealth <= 0)
+        {
+            //player is dead
+            playerHealth = 0;
+            inputDirection = Vector3.zero;
+            StartCoroutine(Revive());
+        }
     }
     void UpdateCurrentGun(GameObject newGun)
     {
@@ -52,5 +65,13 @@ public class PlayerController : MonoBehaviour
                     break;
                 }
         }
+    }
+
+
+
+    private IEnumerator Revive()
+    {
+        yield return new WaitForSeconds(3);
+        playerHealth = 50;
     }
 }
