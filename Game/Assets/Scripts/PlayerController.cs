@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         currentGun = newGun;
         Destroy(currentGun.GetComponent<BoxCollider2D>());
         currentRB = currentGun.GetComponent<Rigidbody2D>();
+        currentGun.tag = "Player";
     }
 
     public void OnMove(InputAction.CallbackContext context) =>
