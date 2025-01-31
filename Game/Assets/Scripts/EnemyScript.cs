@@ -7,7 +7,7 @@ public class EnemyScript : MonoBehaviour
     Rigidbody2D rb;
 
     //variables about the player
-    private Transform _playerTransform;
+    private Transform playerTransform;
     bool foundPlayer;
 
     [Header("speed")]
@@ -16,23 +16,23 @@ public class EnemyScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _playerTransform = GameObject.FindGameObjectWithTag("Gun").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine(Move());
+        //StartCoroutine(Move());
     }
 
 
     // Update is called once per frame
     private void Update()
     {
-        _playerTransform = GameObject.FindGameObjectWithTag("Gun").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     bool checkPlayerPos()
     {
         //check position of player, if close start moving towards player
-        _playerTransform = GameObject.FindGameObjectWithTag("Gun").transform;
-        var distanceToPlayer = _playerTransform.position.x - rb.position.x;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        var distanceToPlayer = playerTransform.position.x - rb.position.x;
         if (distanceToPlayer >= 2) {foundPlayer = false;}
         else {foundPlayer = true;}
         return foundPlayer;
@@ -78,6 +78,6 @@ public class EnemyScript : MonoBehaviour
         return direction;
     }
 
-    Vector3 toPlayer() { return _playerTransform.position - transform.position;}
+    Vector3 toPlayer() { return playerTransform.position - transform.position;}
 
     }
