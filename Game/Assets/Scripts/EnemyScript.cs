@@ -25,7 +25,7 @@ public class EnemyScript : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
-        //StartCoroutine(Move());
+        StartCoroutine(Move());
     }
 
 

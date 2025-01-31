@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
 
     void EnemySpawn()
     {
-        for (int i = 0; i < spawnAmount; i++)
+        for (int i = 1; i < spawnAmount; i++)
         {
             Instantiate(EnemyPrefab);
         }
