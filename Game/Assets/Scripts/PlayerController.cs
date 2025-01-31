@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     Vector2 inputDirection;
     GameObject currentGun;
     Rigidbody2D currentRB;
-    [Header("Starting Gun")]
+    [Header("Prefabs")]
     public GameObject startingGun;
+    Gun gunScript;
 
     [Header("Movement")]
     public float moveSpeed;
@@ -30,8 +31,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentRB.MovePosition(currentRB.position + 
-            inputDirection * moveSpeed * Time.deltaTime);
+        if(!gunScript.hasKnockback) 
+            currentRB.MovePosition(currentRB.position + 
+                inputDirection * moveSpeed * Time.deltaTime);
         transform.position = currentRB.position;
 
         if (playerHealth <= 0)
@@ -41,17 +43,28 @@ public class PlayerController : MonoBehaviour
             inputDirection = Vector3.zero;
             StartCoroutine(Revive());
         }
+        RotateGun();
     }
     void UpdateCurrentGun(GameObject newGun)
     {
         currentGun = newGun;
         Destroy(currentGun.GetComponent<BoxCollider2D>());
         currentRB = currentGun.GetComponent<Rigidbody2D>();
+        currentGun.tag = "Player";
+        gunScript = currentGun.GetComponent<Gun>();
     }
 
+    void RotateGun()
+    {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector3 direction = (mousePosition - currentGun.transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180f;
+        currentGun.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+    //Move the gun with WASD or Arrow Keys
     public void OnMove(InputAction.CallbackContext context) =>
         inputDirection = context.ReadValue<Vector2>();
-    
+    //Switch gun with Space
     public void OnAction(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -67,11 +80,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-
     private IEnumerator Revive()
     {
         yield return new WaitForSeconds(3);
         playerHealth = 50;
     }
+    //Shoot the gun with LMB
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            gunScript.ShootBullet();
+        }
+    }
+   
+
 }
